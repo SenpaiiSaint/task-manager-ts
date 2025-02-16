@@ -1,50 +1,75 @@
-# React + TypeScript + Vite
+# Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple task management application built using **React (TypeScript)** with **localStorage** for persistent data storage. The app allows users to add, complete, and delete tasks efficiently. It features a **dynamic navbar, a sidebar menu**, and a clean UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Add new tasks
+✅ Mark tasks as completed
+✅ Delete tasks
+✅ Tasks persist in **localStorage**
+✅ Responsive UI with **Sidebar Navigation**
+✅ Modular component-based architecture
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React (TypeScript)
+- CSS for styling
+- LocalStorage for data persistence
 
-- Configure the top-level `parserOptions` property like this:
+## Folder Structure
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+/src
+  /components
+    ├── Navbar.tsx
+    ├── Sidebar.tsx
+    ├── TaskInput.tsx
+    ├── TaskList.tsx
+  /styles
+    ├── App.css
+  ├── App.tsx
+  ├── index.tsx
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation & Setup
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 1️⃣ Clone the Repository
+```sh
+  git clone https://github.com/your-username/task-manager.git
+  cd task-manager
 ```
+
+### 2️⃣ Install Dependencies
+```sh
+  npm install
+```
+
+### 3️⃣ Run the Application
+```sh
+  npm run dev   # For Vite
+  # OR
+  npm start     # For Create React App
+```
+
+## Usage
+
+1. Click the **menu button (☰)** to open the sidebar.
+2. Enter a task in the input field and press **Add**.
+3. Click on a task to **mark it as completed**.
+4. Press the **Delete** button to remove a task.
+5. Tasks will persist even after page refresh.
+
+## Contributing
+
+Feel free to fork this repository and submit pull requests. Any contributions are welcome! 🚀
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+### 💡 Have suggestions or feedback?
+Let me know by opening an issue on GitHub!
+
